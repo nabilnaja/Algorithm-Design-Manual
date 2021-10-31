@@ -1,4 +1,4 @@
-package chapter3;
+package chapter3.exercise1;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
