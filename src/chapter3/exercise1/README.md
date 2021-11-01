@@ -8,3 +8,11 @@ string ((())())() contains properly nested pairs of parentheses, while the strin
 properly nested and balanced parentheses, and false if otherwise. For full credit,
 identify the position of the first offending parenthesis if the string is not properly
 nested and balanced.
+
+     
+* complexity analysis
+
+
+First solution use a stack, the time comlexity is O(n) and space complexity is O(n)
+
+Second solution use a int variable as a counter, the time comlexity is O(n) and space complexity is O(1)
