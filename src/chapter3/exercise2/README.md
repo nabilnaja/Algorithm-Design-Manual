@@ -7,3 +7,5 @@ parentheses in S, which is 12 in the example above. (Hint: The solution is not
 necessarily a contiguous run of parenthesis from S.)
 
 * complexity analysis
+  
+the time comlexity is O(n) and space complexity is O(n)
