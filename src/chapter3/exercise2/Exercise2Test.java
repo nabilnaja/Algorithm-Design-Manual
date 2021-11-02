@@ -18,14 +18,19 @@ class Exercise2Test {
     public void BeforeAll() {
         testCase = Map.ofEntries(
                 new AbstractMap.SimpleEntry<>("", 0),
-                new AbstractMap.SimpleEntry<>(")()(())()()))())))(", 12),
-                new AbstractMap.SimpleEntry<>("()()())()()", 4),
-                new AbstractMap.SimpleEntry<>(")(())((()()))", 8),
+                new AbstractMap.SimpleEntry<>("((()", 2),
+                new AbstractMap.SimpleEntry<>(")()())", 4),
+                new AbstractMap.SimpleEntry<>(")()()()))))", 6),
+                new AbstractMap.SimpleEntry<>(")()()()((((((", 6),
+                new AbstractMap.SimpleEntry<>("()(()))))", 6),
+                new AbstractMap.SimpleEntry<>(")()(())()()))())))(", 10),
+                new AbstractMap.SimpleEntry<>("()()())()()", 6),
+                new AbstractMap.SimpleEntry<>(")(())((()()))", 12),
                 new AbstractMap.SimpleEntry<>("(((((((())))))))()", 18),
                 new AbstractMap.SimpleEntry<>("(())))()()()))((((())))))", 10)
         );
     }
-    @Test @Disabled
+    @Test
     public void longestBalancedParentheses(){
         testCase.forEach((s, expectedLength) -> assertEquals(expectedLength, Exercise2.longestBalancedParentheses(s)));
     }
