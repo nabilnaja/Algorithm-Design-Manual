@@ -5,15 +5,9 @@ import org.junit.platform.commons.util.StringUtils;
 import java.util.*;
 
 public class Exercise1 {
-    public List<String> correct;
-    public List<String> incorrect;
+
     private static final char closing = ')';
     private static final char opening = '(';
-
-    public Exercise1(){
-        correct = Arrays.asList(null, "", "(())", "(()()())()", "()(()(())())", "()(())(())()");
-        incorrect = Arrays.asList("(()()", ")()()",  "(()((()())()", "()(()))(())()");
-    }
 
 
     public static boolean isBalancedStack(String s){
