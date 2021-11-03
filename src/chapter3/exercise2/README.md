@@ -8,4 +8,4 @@ necessarily a contiguous run of parenthesis from S.)
 
 * complexity analysis
   
-the time comlexity is O(n) and space complexity is O(n)
+the time complexity is O(n) and space complexity is O(n)

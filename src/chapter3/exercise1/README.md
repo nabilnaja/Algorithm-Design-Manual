@@ -13,6 +13,6 @@ nested and balanced.
 * complexity analysis
 
 
-First solution use a stack, the time comlexity is O(n) and space complexity is O(n)
+First solution use a stack, the time complexity is O(n) and space complexity is O(n)
 
-Second solution use a int variable as a counter, the time comlexity is O(n) and space complexity is O(1)
+Second solution use a int variable as a counter, the time complexity is O(n) and space complexity is O(1)
