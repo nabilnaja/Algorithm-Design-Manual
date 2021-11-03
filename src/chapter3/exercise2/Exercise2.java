@@ -10,6 +10,30 @@ public class Exercise2 {
     private static final char opening = '(';
 
     public static int longestBalancedParentheses(String s) {
+        int longest = 0;
+        int current = 0;
+        int count = 0;
+        if (StringUtils.isBlank(s))
+            return 0;
+
+        for (int i = 0, n = s.length(); i < n; i++) {
+            switch (s.charAt(i)) {
+                case '(' -> count++;
+                case ')' -> count--;
+                default -> throw new IllegalArgumentException();
+            }
+            current++;
+            if (count < 0){
+                longest = Math.max(--current, longest);
+                current = 0;
+                count = 0;
+            }
+        }
+
+        return Math.max(current - count, longest);
+    }
+
+    public static int longestBalancedParenthesesLambda(String s) {
         AtomicInteger longest = new AtomicInteger(0);
         AtomicInteger current = new AtomicInteger(0);
         AtomicInteger count = new AtomicInteger(0);

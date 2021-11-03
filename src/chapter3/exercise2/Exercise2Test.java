@@ -1,7 +1,6 @@
 package chapter3.exercise2;
 
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
@@ -29,6 +28,10 @@ class Exercise2Test {
                 new AbstractMap.SimpleEntry<>("(((((((())))))))()", 18),
                 new AbstractMap.SimpleEntry<>("(())))()()()))((((())))))", 10)
         );
+    }
+    @Test
+    public void longestBalancedParenthesesLambda(){
+        testCase.forEach((s, expectedLength) -> assertEquals(expectedLength, Exercise2.longestBalancedParenthesesLambda(s)));
     }
     @Test
     public void longestBalancedParentheses(){
