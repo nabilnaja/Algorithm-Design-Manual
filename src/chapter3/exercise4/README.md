@@ -5,5 +5,8 @@ Design a stack S that supports S.push(x), S.pop(), and S.findmin(), which return
      
 * complexity analysis
 
+the time complexity is O(n) and space complexity is O(1)
+
+
 
 
