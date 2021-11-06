@@ -9,5 +9,6 @@ algorithm should take linear time.
 * complexity analysis
 
 
-Iterative solution, the time complexity is O(n) and space complexity is O(n)
+Iterative solution, the time complexity is O(n) and space complexity is O(1)
+Recursive solution, the time complexity is O(n) and space complexity is O(n)
 
