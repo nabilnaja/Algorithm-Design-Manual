@@ -30,9 +30,17 @@ class Exercise3Test {
     }
 
     @Test
-    public void reverseLinkedList(){
+    public void reverseLinkedListIterative(){
         IntStream.range(0, expectedResultHead.size()).forEach(i -> {
-            Node reversedLinkedList = Exercise3.reverseLinkedList(sourceHead.get(i));
+            Node reversedLinkedList = Exercise3.reverseLinkedListIterative(sourceHead.get(i));
+            assertTrue(Node.compareLinkedList(expectedResultHead.get(i), reversedLinkedList));
+        });
+    }
+
+    @Test
+    public void reverseLinkedListRecursive(){
+        IntStream.range(0, expectedResultHead.size()).forEach(i -> {
+            Node reversedLinkedList = Exercise3.reverseLinkedListRecursive(sourceHead.get(i));
             assertTrue(Node.compareLinkedList(expectedResultHead.get(i), reversedLinkedList));
         });
     }
