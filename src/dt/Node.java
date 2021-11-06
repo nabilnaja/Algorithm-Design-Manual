@@ -15,6 +15,17 @@ public class Node {
         this(data, null);
     }
 
+    public static Node getNodeAt(Node head, int position) {
+        Node node = head;
+        for (int i = 0; i < position; i++) {
+            if (node != null)
+                node = node.next;
+            else
+                return null;
+        }
+        return node;
+    }
+
     public static void printList(Node n) {
         int i = 0;
         while (n != null) {
@@ -36,17 +47,17 @@ public class Node {
     }
 
     public static boolean compareLinkedList(Node n1, Node n2) {
-        //Node.printList(n1);
-        //Node.printList(n2);
-        Node prev1 = n1;
-        Node prev2 = n2;
-        while (prev1.next != null && prev2.next != null) {
-            if (n1.data != n2.data)
+        Node.printList(n1);
+        Node.printList(n2);
+        Node a = n1, b = n2;
+        while (a != null && b != null)
+        {
+            if (a.data != b.data)
                 return false;
-            prev1 = prev1.next;
-            prev2 = prev2.next;
+            a = a.next;
+            b = b.next;
         }
-        return (prev1.next == null && prev2.next == null);
+        return (a == null && b == null);
     }
 
     public String toString() {

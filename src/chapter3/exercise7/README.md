@@ -6,7 +6,10 @@ linked list as per the footnote from page 79, ideally to an actual implementatio
 Support the other operations as efficiently as possible.
 
 * complexity analysis
+    
+Deletion happen in constant time O(1), but only work if the deleted node is not the tail. 
 
+We don't use any extra space, so the space complexity is O(1)
 
 
 
