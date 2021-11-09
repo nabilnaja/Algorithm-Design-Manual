@@ -8,7 +8,8 @@ or diagonal. Create a data structure with O(n) space that accepts a sequence
 of moves, and reports in constant time whether the last move won the game.
 
 * complexity analysis
-    
+
+the time complexity is O(1) and space complexity is O(n), as required. 
 
 
 
