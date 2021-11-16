@@ -7,6 +7,7 @@ efficient algorithm to determine whether strings X and Y are anagrams.
 
 * complexity analysis
 
+the time complexity is O(n) where n is the size of the word and space complexity is O(1) since the array we use have a fixed size. 
 
 
 
