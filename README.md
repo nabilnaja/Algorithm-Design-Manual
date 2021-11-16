@@ -16,5 +16,5 @@ Stacks, Queues, and Lists
 Elementary Data Structures
 
 * Exercise 8 : Done
-* Exercise 9 :
+* Exercise 9 : Done
 
