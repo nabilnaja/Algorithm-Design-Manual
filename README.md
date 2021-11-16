@@ -5,16 +5,23 @@ My solutions for Algorithm Design Manual 3nd Edition
 
 Stacks, Queues, and Lists
 
-* Exercise 1 : Done
-* Exercise 2 : Done
-* Exercise 3 : Done
-* Exercise 4 : Done
-* Exercise 5 : 
-* Exercise 6 : 
-* Exercise 7 : Done 
+* Exercise 1  : Done
+* Exercise 2  : Done
+* Exercise 3  : Done
+* Exercise 4  : Done
+* Exercise 5  : 
+* Exercise 6  : 
+* Exercise 7  : Done 
 
 Elementary Data Structures
 
-* Exercise 8 : Done
-* Exercise 9 : Done
+* Exercise 8  : Done
+* Exercise 9  : Done
+* Exercise 10 :
+
+Trees and Other Dictionary Structures
+
+* Exercise 11 : 
+* Exercise 12 : 
+* Exercise 13 : 
 
