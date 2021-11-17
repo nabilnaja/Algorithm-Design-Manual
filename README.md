@@ -17,11 +17,11 @@ Elementary Data Structures
 
 * Exercise 8  : Done
 * Exercise 9  : Done
-* Exercise 10 :
+* Exercise 10 : Done
 
 Trees and Other Dictionary Structures
 
-* Exercise 11 : 
+* Exercise 11 : Done
 * Exercise 12 : 
 * Exercise 13 : 
 
