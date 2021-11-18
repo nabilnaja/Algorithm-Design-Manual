@@ -1,12 +1,9 @@
 package chapter3.exercise11;
 
-import chapter3.exercise10.Exercise10;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.stream.IntStream;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -27,7 +24,7 @@ class Exercise11Test {
     }
 
     @Test
-    void isBalancedStack() {
+    void exercise11Test() {
         assertEquals(setSize, exercise11.dictionary.length);
         IntStream.range(0, presentNumbers.length).forEach(i -> exercise11.insert(presentNumbers[i]));
         IntStream.range(0, presentNumbers.length).forEach(i -> assertEquals(presentNumbers[i], exercise11.search(presentNumbers[i])));
