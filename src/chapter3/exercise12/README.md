@@ -1,4 +1,4 @@
-#### Chapter 3 - Exercise 11
+#### Chapter 3 - Exercise 12
 * Description
 
 The maximum depth of a binary tree is the number of nodes on the path
