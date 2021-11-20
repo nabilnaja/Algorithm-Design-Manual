@@ -22,6 +22,6 @@ Elementary Data Structures
 Trees and Other Dictionary Structures
 
 * Exercise 11 : Done
-* Exercise 12 : 
+* Exercise 12 : Done
 * Exercise 13 : 
 
