@@ -4,7 +4,7 @@ import static dt.Printer.println;
 
 public class TreeNode {
 
-    public int data;
+    public int val;
     public TreeNode left;
     public TreeNode right;
 
@@ -12,22 +12,22 @@ public class TreeNode {
     }
 
     public TreeNode(int data) {
-        this.data = data;
+        this.val = data;
     }
 
     public TreeNode(int data, TreeNode left, TreeNode right) {
-        this.data = data;
+        this.val = data;
         this.left = left;
         this.right = right;
     }
 
     public String toString() {
-        return String.valueOf(data);
+        return String.valueOf(val);
     }
 
     public static void printTree(TreeNode n) {
         if (n == null) return;
-        println(n.data);
+        println(n.val);
         printTree(n.left, 0, true);
         printTree(n.right, 0, false);
     }
@@ -36,9 +36,9 @@ public class TreeNode {
         if (n == null) return;
         for (int i = 0; i < level; ++i) Printer.print("  ");
         if (isLeft)
-            Printer.println("/- " + n.data);
+            Printer.println("/- " + n.val);
         else
-            Printer.println("\\- " + n.data);
+            Printer.println("\\- " + n.val);
         printTree(n.left, level + 1, true);
         printTree(n.right, level + 1, false);
     }
