@@ -2,17 +2,17 @@ package dt;
 
 public class Node {
 
-    public int data;
+    public int val;
     public Node next;
 
 
-    public Node(int data, Node next) {
-        this.data = data;
+    public Node(int val, Node next) {
+        this.val = val;
         this.next = next;
     }
 
-    public Node(int data) {
-        this(data, null);
+    public Node(int val) {
+        this(val, null);
     }
 
     public static Node getNodeAt(Node head, int position) {
@@ -29,7 +29,7 @@ public class Node {
     public static void printList(Node n) {
         int i = 0;
         while (n != null) {
-            System.out.print(n.data + "->");
+            System.out.print(n.val + "->");
             n = n.next;
         }
         System.out.println("NULL");
@@ -52,7 +52,7 @@ public class Node {
         Node a = n1, b = n2;
         while (a != null && b != null)
         {
-            if (a.data != b.data)
+            if (a.val != b.val)
                 return false;
             a = a.next;
             b = b.next;
@@ -61,7 +61,7 @@ public class Node {
     }
 
     public String toString() {
-        return String.valueOf(data);
+        return String.valueOf(val);
     }
 
 }
