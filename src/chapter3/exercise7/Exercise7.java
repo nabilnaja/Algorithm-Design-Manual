@@ -10,7 +10,7 @@ public class Exercise7 {
         if (node.next == null){
             return;
         }
-        node.data = node.next.data;
+        node.val = node.next.val;
         node.next = node.next.next;
     }
 }

@@ -32,7 +32,7 @@ class Exercise7Test {
     public void deleteNode(){
         Node node = Node.getNodeAt(sourceHead.get(0), 4);
         assertNotNull(node);
-        assertEquals(5, node.data);
+        assertEquals(5, node.val);
         Exercise7.deleteNode(node);
         assertTrue(Node.compareLinkedList(expectedResultHead.get(0), sourceHead.get(0)));
     }
@@ -41,7 +41,7 @@ class Exercise7Test {
     public void deleteNode2(){
         Node node = Node.getNodeAt(sourceHead.get(0), 1);
         assertNotNull(node);
-        assertEquals(2, node.data);
+        assertEquals(2, node.val);
         Exercise7.deleteNode(node);
         assertTrue(Node.compareLinkedList(expectedResultHead.get(1), sourceHead.get(1)));
     }
@@ -50,7 +50,7 @@ class Exercise7Test {
     public void deleteNode3(){
         Node node = Node.getNodeAt(sourceHead.get(2), 0);
         assertNotNull(node);
-        assertEquals(1, node.data);
+        assertEquals(1, node.val);
         Exercise7.deleteNode(node);
         assertTrue(Node.compareLinkedList(expectedResultHead.get(2), sourceHead.get(2)));
     }
