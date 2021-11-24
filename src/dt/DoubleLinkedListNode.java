@@ -5,6 +5,8 @@ public class DoubleLinkedListNode {
     public DoubleLinkedListNode prev;
     public DoubleLinkedListNode next;
 
+    public DoubleLinkedListNode() {
+    }
     public DoubleLinkedListNode(int val, DoubleLinkedListNode prev, DoubleLinkedListNode next) {
         this.val = val;
         this.prev = prev;
