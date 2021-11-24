@@ -11,6 +11,7 @@ public class TreeNode {
     TreeNode() {
     }
 
+
     public TreeNode(int data) {
         this.val = data;
     }
@@ -52,5 +53,37 @@ public class TreeNode {
         return new TreeNode(values[i], arrayToTree(values, 2 * i + 1),
                 arrayToTree(values, 2 * i + 2));
     }
+
+    public static TreeNode sortedArrayToBST(int[] arr, int start, int end) {
+
+        /* Base Case */
+        if (start > end) {
+            return null;
+        }
+
+        /* Get the middle element and make it root */
+        int mid = (start + end) / 2;
+        TreeNode node = new TreeNode(arr[mid]);
+
+        /* Recursively construct the left subtree and make it
+         left child of root */
+        node.left = sortedArrayToBST(arr, start, mid - 1);
+
+        /* Recursively construct the right subtree and make it
+         right child of root */
+        node.right = sortedArrayToBST(arr, mid + 1, end);
+
+        return node;
+    }
+    public static void inOrder(TreeNode root)
+    {
+        if (root != null) {
+            inOrder(root.left);
+            System.out.print(root.val + " ");
+            inOrder(root.right);
+        }
+    }
+
+
 
 }
