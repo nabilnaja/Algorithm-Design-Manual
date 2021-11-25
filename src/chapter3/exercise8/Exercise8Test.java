@@ -1,7 +1,6 @@
 package chapter3.exercise8;
 
-import chapter3.exercise3.Exercise3;
-import dt.Node;
+
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
