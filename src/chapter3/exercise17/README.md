@@ -8,3 +8,10 @@ is height-balanced
 
 The time complexity of this algorithm is O(n) as required. The space complexity is O(h) where h is the depth of the tree.
 
+* Test
+
+I used leetcode test cases and run the code on leetcode.
+
+
+[110. Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)
+
