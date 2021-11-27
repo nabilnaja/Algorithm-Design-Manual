@@ -7,5 +7,5 @@ find the maximum depth of a binary tree with n nodes.
 
 * complexity analysis
 
-the time complexity is O(n). Since we use Recursion ehe space complexity is O(h), where h is the tree depth of the tree. 
+the time complexity is O(n). Since we use Recursion ehe space complexity is O(h), where h is the depth of the tree. 
 
