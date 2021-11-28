@@ -1,5 +1,8 @@
 package dt;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static dt.Printer.println;
 
 public class TreeNode {
@@ -85,5 +88,16 @@ public class TreeNode {
     }
 
 
+    public static List<Integer> bstToArray(TreeNode n) {
+        List<Integer> result = new ArrayList<>();
+        if (n.left != null) {
+            result.addAll(bstToArray(n.left));
+        }
+        result.add(n.val);
 
+        if (n.right != null) {
+            result.addAll(bstToArray(n.right));
+        }
+        return result;
+    }
 }
