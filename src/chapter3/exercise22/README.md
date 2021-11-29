@@ -10,3 +10,7 @@ Design a data structure that supports the following two operations:
 All operations must take O(log n) time on an n-element set.
 
 * complexity analysis
+
+Time complexity of add method is O(log n), while the time complexity of the median method is O(1).
+
+The space complexity is O(n)
