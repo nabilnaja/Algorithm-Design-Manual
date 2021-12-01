@@ -11,11 +11,11 @@ public class Exercise23 {
         List<String> result = new ArrayList<>();
         if (root == null || prefix == null)
             return result;
-        wordByPrefix(root, result, prefix, prefix.length());
+        wordByPrefixHelper(root, result, prefix, prefix.length());
         return result;
     }
 
-    public static void wordByPrefix(TreeNodeString root, List<String> result, String prefix, int prefixSize) {
+    public static void wordByPrefixHelper(TreeNodeString root, List<String> result, String prefix, int prefixSize) {
         if (root == null)
             return;
         boolean foundNewRoot = false;
@@ -24,10 +24,10 @@ public class Exercise23 {
             foundNewRoot = true;
         }
         if (foundNewRoot || prefix.compareTo(getPrefixFromWord(root.val, prefixSize)) < 0){
-            wordByPrefix(root.left, result, prefix, prefix.length());
+            wordByPrefixHelper(root.left, result, prefix, prefix.length());
         }
         if (foundNewRoot || prefix.compareTo(getPrefixFromWord(root.val, prefixSize)) > 0){
-            wordByPrefix(root.right, result, prefix, prefix.length());
+            wordByPrefixHelper(root.right, result, prefix, prefix.length());
         }
     }
 
