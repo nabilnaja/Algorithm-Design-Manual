@@ -8,4 +8,6 @@ A is k-unique.
 
 * complexity analysis
 
+Space complexity is O(n), space complexity is O(K) since we use a hashmap as cache.
+
 
