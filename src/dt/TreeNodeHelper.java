@@ -4,42 +4,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static dt.Printer.println;
-// todo use generics
-public class TreeNodeString {
 
-    public String val;
-    public TreeNodeString left;
-    public TreeNodeString right;
+public class TreeNodeHelper<T> {
 
-    public TreeNodeString() {
+    public TreeNodeHelper() {
     }
 
-
-    public TreeNodeString(String data) {
-        this.val = data;
-    }
-
-    public TreeNodeString(String data, TreeNodeString left, TreeNodeString right) {
-        this.val = data;
-        this.left = left;
-        this.right = right;
-    }
-
-    public String toString() {
-        return val;
-    }
-
-    public static TreeNodeString arrayToTree(String[] values) {
+    public TreeNode<T> arrayToTree(T[] values) {
         return arrayToTree(values, 0);
     }
 
-    private static TreeNodeString arrayToTree(String[] values, int i) {
+    private TreeNode<T> arrayToTree(T[] values, int i) {
         if (i >= values.length) return null;
-        return new TreeNodeString(values[i], arrayToTree(values, 2 * i + 1),
+        return new TreeNode<>(values[i], arrayToTree(values, 2 * i + 1),
                 arrayToTree(values, 2 * i + 2));
     }
 
-    public static TreeNodeString sortedArrayToBST(String[] arr, int start, int end) {
+    public TreeNode<T> sortedArrayToBST(T[] arr, int start, int end) {
 
         /* Base Case */
         if (start > end) {
@@ -48,11 +29,11 @@ public class TreeNodeString {
 
         /* Get the middle element and make it root */
         int mid = (start + end) / 2;
-        TreeNodeString node = new TreeNodeString(arr[mid]);
+        TreeNode<T> node = new TreeNode<>(arr[mid]);
 
         /* Recursively construct the left subtree and make it
          left child of root */
-        node.left = TreeNodeString.sortedArrayToBST(arr, start, mid - 1);
+        node.left = sortedArrayToBST(arr, start, mid - 1);
 
         /* Recursively construct the right subtree and make it
          right child of root */
@@ -61,17 +42,8 @@ public class TreeNodeString {
         return node;
     }
 
-    public static void inOrder(TreeNodeString root) {
-        if (root != null) {
-            inOrder(root.left);
-            System.out.print(root.val + " ");
-            inOrder(root.right);
-        }
-    }
-
-
-    public static List<String> bstToArray(TreeNodeString n) {
-        List<String> result = new ArrayList<>();
+    public List<T> bstToArray(TreeNode<T> n) {
+        List<T> result = new ArrayList<>();
         if (n.left != null) {
             result.addAll(bstToArray(n.left));
         }
@@ -83,14 +55,14 @@ public class TreeNodeString {
         return result;
     }
 
-    public static void printTree(TreeNodeString n) {
+    public void printTree(TreeNode<T> n) {
         if (n == null) return;
         println(n.val);
         printTree(n.left, 0, true);
         printTree(n.right, 0, false);
     }
 
-    private static void printTree(TreeNodeString n, int level, boolean isLeft) {
+    private void printTree(TreeNode<T> n, int level, boolean isLeft) {
         if (n == null) return;
         for (int i = 0; i < level; ++i) Printer.print("  ");
         if (isLeft)

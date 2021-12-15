@@ -3,11 +3,11 @@ package chapter3.exercise13;
 import dt.TreeNode;
 
 public class Exercise13_2 {
-    TreeNode previous = new TreeNode(Integer.MIN_VALUE);
-    TreeNode first = null;
-    TreeNode second = null;
+    TreeNode<Integer> previous = new TreeNode<>(Integer.MIN_VALUE);
+    TreeNode<Integer> first = null;
+    TreeNode<Integer> second = null;
 
-    public void recoverTree(TreeNode root) {
+    public void recoverTree(TreeNode<Integer> root) {
         if (root == null) return;
         while (root != null) {
             if (root.left == null) {
@@ -15,7 +15,7 @@ public class Exercise13_2 {
                 previous = root;
                 root = root.right;
             } else {
-                TreeNode temp = root.left;
+                TreeNode<Integer> temp = root.left;
                 while (temp.right != null
                         && temp.right != root)
                     temp = temp.right;
@@ -36,7 +36,7 @@ public class Exercise13_2 {
         second.val = temp;
     }
 
-    private void checkError(TreeNode root) {
+    private void checkError(TreeNode<Integer> root) {
         if (previous.val > root.val) {
             if (first == null) {
                 first = previous;

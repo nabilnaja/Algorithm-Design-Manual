@@ -14,7 +14,7 @@ public class Exercise14 {
 
     }
 
-    public static DoubleLinkedListNode toLinkedList(TreeNode root) {
+    public static DoubleLinkedListNode toLinkedList(TreeNode<Integer> root) {
         doubleLinkedList = new DoubleLinkedListNode(0, null, null);
         head = doubleLinkedList;
         prev = null;
@@ -24,7 +24,7 @@ public class Exercise14 {
         return doubleLinkedList.next;
     }
 
-    public static void toLinkedListHelper(TreeNode root) {
+    public static void toLinkedListHelper(TreeNode<Integer> root) {
         if (root == null)
             return;
         toLinkedListHelper(root.left);

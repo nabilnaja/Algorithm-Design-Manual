@@ -1,13 +1,13 @@
 package chapter3.exercise23;
 
-import dt.TreeNodeString;
+import dt.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Exercise23 {
 
-    public static List<String> wordByPrefix(TreeNodeString root, String prefix) {
+    public static List<String> wordByPrefix(TreeNode<String> root, String prefix) {
         List<String> result = new ArrayList<>();
         if (root == null || prefix == null)
             return result;
@@ -15,7 +15,7 @@ public class Exercise23 {
         return result;
     }
 
-    public static void wordByPrefixHelper(TreeNodeString root, List<String> result, String prefix, int prefixSize) {
+    public static void wordByPrefixHelper(TreeNode<String> root, List<String> result, String prefix, int prefixSize) {
         if (root == null)
             return;
         boolean foundNewRoot = false;

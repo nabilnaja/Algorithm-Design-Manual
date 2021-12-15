@@ -1,6 +1,7 @@
 package chapter3.exercise23;
 
-import dt.TreeNodeString;
+import dt.TreeNode;
+import dt.TreeNodeHelper;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -11,8 +12,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class Exercise23Test {
-    TreeNodeString root1;
-    TreeNodeString root2;
+    TreeNodeHelper<String> treeNodeHelper = new TreeNodeHelper<>();
+
+    TreeNode<String> root1;
+    TreeNode<String> root2;
     String[] arrayBst1;
     String[] arrayBst2;
     String[] expectedResult1;
@@ -24,14 +27,14 @@ class Exercise23Test {
 
     @BeforeAll
     void setUp() {
-        root1 = new TreeNodeString();
+        root1 = new TreeNode<>();
         prefix1 = "123";
         prefix2 = "aaab";
         prefix5 = "aaabb";
         arrayBst1 = new String[]{"12211", "12212", "12213", "12214", "12215", "12311", "12312", "12313", "12314", "12315", "12316", "12411", "12412", "12413"};
         arrayBst2 = new String[]{"aaaaaa", "aaaaab", "aaaabb", "aaaabc", "aaab", "aaabb", "aaabbc", "aaabel", "aaabpp", "aaacqq", "aaadii", "aaahol", "aaawaa", "aaawbb"};
-        root1 = TreeNodeString.sortedArrayToBST(Stream.of(arrayBst1).sorted().toArray(String[]::new), 0, arrayBst1.length - 1);
-        root2 = TreeNodeString.sortedArrayToBST(Stream.of(arrayBst2).sorted().toArray(String[]::new), 0, arrayBst2.length - 1);
+        root1 = treeNodeHelper.sortedArrayToBST(Stream.of(arrayBst1).sorted().toArray(String[]::new), 0, arrayBst1.length - 1);
+        root2 = treeNodeHelper.sortedArrayToBST(Stream.of(arrayBst2).sorted().toArray(String[]::new), 0, arrayBst2.length - 1);
         expectedResult1 = Stream.of(arrayBst1).filter(s -> s.startsWith(prefix1)).sorted().toArray(String[]::new);
         expectedResult2 = Stream.of(arrayBst2).filter(s -> s.startsWith(prefix2)).sorted().toArray(String[]::new);
         expectedResult5 = Stream.of(arrayBst2).filter(s -> s.startsWith(prefix5)).sorted().toArray(String[]::new);

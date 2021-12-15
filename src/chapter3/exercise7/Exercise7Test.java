@@ -2,6 +2,7 @@ package chapter3.exercise7;
 
 import dt.Node;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
