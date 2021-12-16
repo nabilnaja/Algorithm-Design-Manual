@@ -14,4 +14,4 @@ space and have O(log n) query time.
 
 * complexity analysis
 
-
+Both solutions were implemented, and the time and space complexity restriction were respected. 
