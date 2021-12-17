@@ -36,4 +36,6 @@ Trees and Other Dictionary Structures
 * Exercise 23 : Done
 * Exercise 24 : Done
 * Exercise 25 : 
+* Exercise 26 : Done
+* Exercise 27 : 
 
