@@ -2,6 +2,7 @@ package dt;
 
 public class AvlTreeNode<T extends Comparable<T>> {
     public T val;
+    public int biggerThan;
     int height;
     int size;
     int frequency;
@@ -12,6 +13,7 @@ public class AvlTreeNode<T extends Comparable<T>> {
         this.val = val;
         height = 1;
         size = 1;
+        biggerThan = 0;
         frequency = 0;
     }
 

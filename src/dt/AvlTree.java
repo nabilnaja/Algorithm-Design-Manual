@@ -4,15 +4,15 @@ public class AvlTree<T extends Comparable<T>> {
 
     public AvlTreeNode<T> root;
 
-    private int getHeight(AvlTreeNode<T> node) {
+    protected int getHeight(AvlTreeNode<T> node) {
         return node == null ? 0 : node.height;
     }
 
-    public void updateHeight(AvlTreeNode<T> node) {
+    protected void updateHeight(AvlTreeNode<T> node) {
         node.height = 1 + Math.max(getHeight(node.left), getHeight(node.right));
     }
 
-    private int getBalance(AvlTreeNode<T> n) {
+    protected int getBalance(AvlTreeNode<T> n) {
         return n == null ? 0 : getHeight(n.right) - getHeight(n.left);
     }
 
@@ -20,11 +20,12 @@ public class AvlTree<T extends Comparable<T>> {
     //          y                                   x
     //      x                   ->                      y
     //          z                                   z
-    AvlTreeNode<T> rotateRight(AvlTreeNode<T> y) {
+    protected AvlTreeNode<T> rotateRight(AvlTreeNode<T> y) {
         AvlTreeNode<T> x = y.left;
         AvlTreeNode<T> z = x.right;
         x.right = y;
         y.left = z;
+        y.biggerThan = y.biggerThan - x.biggerThan - x.frequency;
         updateHeight(y);
         updateHeight(x);
         return x;
@@ -32,17 +33,18 @@ public class AvlTree<T extends Comparable<T>> {
     //          y                                   x
     //               x          ->             y
     //          z                                   z
-    AvlTreeNode<T> rotateLeft(AvlTreeNode<T> y) {
+    protected AvlTreeNode<T> rotateLeft(AvlTreeNode<T> y) {
         AvlTreeNode<T> x = y.right;
         AvlTreeNode<T> z = x.left;
         x.left = y;
         y.right = z;
+        x.biggerThan = x.biggerThan + y.biggerThan + y.frequency;
         updateHeight(y);
         updateHeight(x);
         return x;
     }
 
-    AvlTreeNode<T> rebalance(AvlTreeNode<T> node) {
+    protected AvlTreeNode<T> rebalance(AvlTreeNode<T> node) {
         updateHeight(node);
         int balance = getBalance(node);
         if (balance > 1) {
@@ -68,12 +70,12 @@ public class AvlTree<T extends Comparable<T>> {
             return new AvlTreeNode<>(data);
         int cmp = node.val.compareTo(data);
         if (cmp > 0) {
+            node.biggerThan++;
             node.left = insert(node.left, data);
         } else if (cmp < 0) {
             node.right = insert(node.right, data);
         } else {
-            System.out.println("duplicate");
-            //throw new RuntimeException("duplicate!");
+            node.frequency++;
         }
         return rebalance(node);
     }
@@ -102,7 +104,7 @@ public class AvlTree<T extends Comparable<T>> {
         return node;
     }
 
-    private AvlTreeNode<T> mostLeftChild(AvlTreeNode<T> node) {
+    protected AvlTreeNode<T> mostLeftChild(AvlTreeNode<T> node) {
         AvlTreeNode<T> current = node;
         while (current.left != null) {
             current = current.left;
@@ -133,7 +135,7 @@ public class AvlTree<T extends Comparable<T>> {
     public void inOrder(AvlTreeNode<T> node) {
         if (node != null) {
             inOrder(node.left);
-            System.out.println(node.val + " " + node.frequency);
+            System.out.println(node.val + " " + node.biggerThan + " " + node.frequency);
             inOrder(node.right);
         }
     }
