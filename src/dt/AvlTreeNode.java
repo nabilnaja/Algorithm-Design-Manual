@@ -14,7 +14,7 @@ public class AvlTreeNode<T extends Comparable<T>> {
         height = 1;
         size = 1;
         biggerThan = 0;
-        frequency = 0;
+        frequency = 1;
     }
 
 }
