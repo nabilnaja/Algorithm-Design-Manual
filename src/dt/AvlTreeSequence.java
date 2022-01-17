@@ -10,6 +10,9 @@ public class AvlTreeSequence<T extends Comparable<T>> extends AvlTreeAbstract<T>
         return node == null ? 0 : node.size;
     }
 
+    final protected int getSum(AvlTreeNode<T> node) {
+        return node == null ? 0 : node.sum;
+    }
 
     @Override
     public AvlTreeNode<T> insert(AvlTreeNode<T> node, T data) {
@@ -32,10 +35,11 @@ public class AvlTreeSequence<T extends Comparable<T>> extends AvlTreeAbstract<T>
         if (node == null)
             return new AvlTreeNode<>(data);
         int leftSize = getSize(node.left);
-        if (index <= leftSize)
+        if (index <= leftSize) {
             node.left = insert(node.left, data, index);
-        else
+        } else {
             node.right = insert(node.right, data, index - leftSize - 1);
+        }
         recalculate(node);
         return rebalance(node);
     }
@@ -60,9 +64,13 @@ public class AvlTreeSequence<T extends Comparable<T>> extends AvlTreeAbstract<T>
         recalculate(x);
     }
 
-    private void recalculate(AvlTreeNode<T> node) {
+    private void
+    recalculate(AvlTreeNode<T> node) {
         if (node != null) {
             node.size = getSize(node.left) + getSize(node.right) + 1;
+            if (node.val instanceof Integer)
+                node.sum = (Integer) node.val + getSum(node.left) + getSum(node.right);
+
         }
     }
 
@@ -77,8 +85,29 @@ public class AvlTreeSequence<T extends Comparable<T>> extends AvlTreeAbstract<T>
             throw new IndexOutOfBoundsException();
         return getNodeAt(root, index);
     }
+    Integer partialSum = 0;
 
-    public AvlTreeNode<T> getNodeAt(AvlTreeNode<T> node, int index) {
+    public Integer partialSum(int index) {
+        if (index < 0 || index >= size())
+            throw new IndexOutOfBoundsException();
+        partialSum = 0;
+        partialSum(root, index);
+        return partialSum;
+    }
+
+    public void partialSum(AvlTreeNode<T> node, int index) {
+        int leftSize = getSize(node.left);
+        if (index < leftSize) {
+            partialSum(node.left, index);
+        } else if (index > leftSize) {
+            partialSum += node.sum - getSum(node.right);
+            partialSum(node.right, index - leftSize - 1);
+        } else {
+            partialSum = partialSum + node.sum - getSum(node.right);
+        }
+    }
+
+    private AvlTreeNode<T> getNodeAt(AvlTreeNode<T> node, int index) {
         int leftSize = getSize(node.left);
         if (index < leftSize)
             return getNodeAt(node.left, index);
@@ -90,7 +119,7 @@ public class AvlTreeSequence<T extends Comparable<T>> extends AvlTreeAbstract<T>
 
     @Override
     public String printNode(AvlTreeNode<T> node) {
-        return "val : " + node.val + " size : " + node.size;
+        return "val : " + node.val + " size : " + node.size + " sum : " + node.sum;
     }
 
 

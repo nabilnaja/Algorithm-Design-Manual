@@ -6,6 +6,7 @@ public class AvlTreeNode<T extends Comparable<T>> {
     int height;
     int size;
     int frequency;
+    int sum;
     public AvlTreeNode<T> left;
     public AvlTreeNode<T> right;
 
@@ -15,6 +16,7 @@ public class AvlTreeNode<T extends Comparable<T>> {
         size = 1;
         biggerThan = 0;
         frequency = 1;
+        sum = val instanceof Integer ? (Integer) val : 0;
     }
 
 }
