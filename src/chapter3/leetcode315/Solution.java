@@ -1,4 +1,4 @@
-package chapter3.leetcode315.leetcode89;
+package chapter3.leetcode315;
 
 import java.util.LinkedList;
 import java.util.List;
