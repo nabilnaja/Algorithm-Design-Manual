@@ -7,3 +7,4 @@ Given two integer arrays preorder and inorder where preorder is the preorder tra
 * complexity analysis
 
 Solution 2 : Time complexity is O(n^2) and space complexity is O(N)
+Solution  : Time complexity is O(n) and space complexity is O(N)
