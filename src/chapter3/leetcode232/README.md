@@ -5,3 +5,4 @@ Implement a first in first out (FIFO) queue using only two stacks. The implement
 
 * complexity analysis
 
+The time complexity of inserts is O(n) while time complexity for peak and delete is O(1). 
