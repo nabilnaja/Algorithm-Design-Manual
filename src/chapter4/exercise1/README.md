@@ -9,3 +9,7 @@ how the Grinch can do the job in O(n log n) time.
 
      
 * complexity analysis
+
+The solution consist of sorting the players by their ratings. 
+
+The time complexity is O (n log n) and space complexity is O ( n )
