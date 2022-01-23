@@ -11,3 +11,5 @@ over the three partitions.
 
      
 * complexity analysis
+
+The time complexity is O(n log n) since we sort the array first. After that we go through the array and construct the pairs.
