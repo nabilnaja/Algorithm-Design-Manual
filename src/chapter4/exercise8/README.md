@@ -24,5 +24,7 @@ Time complexity is O(n log n) + O(m log m) + O( m + n). n is the number of bills
 (b) Use bucket sort (a bucket by company) and count number of element per bucket.
 Time complexity is O(n + m). n is the number of books and m is the number of company's. O(n) is for the bucket sort, then O(m) to get the size of each bucket. 
 
+(c) Sort all book checkout cards using the name and keep only one card per name. 
 
+Time complexity is O(n log n) + O(n). O(n log n) for sorting the cars, then O(n) to go through the sorted cards, counting them and ignoring the duplicates. 
 
