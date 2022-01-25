@@ -14,4 +14,10 @@ the past year, each of which contains the name of the person who took out
 the book. Determine how many distinct people checked out at least one
 book.
 
-* complexity analysis
+* Solution
+
+(a) Sort both piles by name, then go through checks if the bill correspond to the check remove both if 
+the check doesn't correspond to the bill add the bill to the unpaid bill list. Continue till we get a corresponding bill.
+
+Time complexity is O(n log n) + O(m log m) + O( m + n)
+
