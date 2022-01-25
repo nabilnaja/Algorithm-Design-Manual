@@ -19,5 +19,10 @@ book.
 (a) Sort both piles by name, then go through checks if the bill correspond to the check remove both if 
 the check doesn't correspond to the bill add the bill to the unpaid bill list. Continue till we get a corresponding bill.
 
-Time complexity is O(n log n) + O(m log m) + O( m + n)
+Time complexity is O(n log n) + O(m log m) + O( m + n). n is the number of bills and m is the number of checks
+
+(b) Use bucket sort (a bucket by company) and count number of element per bucket.
+Time complexity is O(n + m). n is the number of books and m is the number of company's. O(n) is for the bucket sort, then O(m) to get the size of each bucket. 
+
+
 
