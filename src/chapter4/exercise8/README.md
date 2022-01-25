@@ -1,0 +1,17 @@
+#### Chapter 4 - Exercise 8 
+* Description
+
+Outline a reasonable method of solving each of the following problems. Give
+the order of the worst-case complexity of your methods.
+(a) You are given a pile of thousands of telephone bills and thousands of checks
+sent in to pay the bills. Find out who did not pay.
+(b) You are given a printed list containing the title, author, call number, and
+publisher of all the books in a school library and another list of thirty
+publishers. Find out how many of the books in the library were published
+by each company.
+(c) You are given all the book checkout cards used in the campus library during
+the past year, each of which contains the name of the person who took out
+the book. Determine how many distinct people checked out at least one
+book.
+
+* complexity analysis
