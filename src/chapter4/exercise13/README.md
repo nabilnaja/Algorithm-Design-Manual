@@ -1,4 +1,4 @@
-#### Chapter 4 - Exercise 12
+#### Chapter 4 - Exercise 13
 * Description
 
 A camera at the door tracks the entry time ai and exit time bi (assume
