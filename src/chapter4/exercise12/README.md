@@ -10,3 +10,10 @@ for the problem.
 
 (b) Assume that A and B are sorted arrays. Give an O(n) algorithm for the
 problem.
+
+* Solution
+
+(a) Sort both arrays (O (n log n)).
+merge the arrays (O(n)).
+
+(b) Merge the arrays (O(n)).
