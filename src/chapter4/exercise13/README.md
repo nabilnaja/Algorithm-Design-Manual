@@ -7,5 +7,7 @@ that analyzes this data to determine the time when the most people were
 simultaneously present at the party. You may assume that all entry and exit
 times are distinct (no ties).
 
-* Solution
+* complexity analysis
+
+The time complexity is O(n log n)
 
