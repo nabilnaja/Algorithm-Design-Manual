@@ -6,3 +6,8 @@ of n integers in O(n + k log n).
 
 * Solution
 
+We construct a min heap using the set, this step take O(n), then we remove the minimum 7 times and each time we heapify
+, the time complexity for this step is O(k log n).
+
+the total time complexity is  O(n + k log n).
+
