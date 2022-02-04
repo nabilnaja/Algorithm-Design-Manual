@@ -9,9 +9,7 @@ properly nested and balanced parentheses, and false if otherwise. For full credi
 identify the position of the first offending parenthesis if the string is not properly
 nested and balanced.
 
-     
 * complexity analysis
-
 
 First solution use a stack, the time complexity is O(n) and space complexity is O(n)
 
