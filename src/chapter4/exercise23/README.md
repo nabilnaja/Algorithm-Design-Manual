@@ -11,3 +11,7 @@ which come before all the blues. The only operations permitted on the keys are:
 Find a correct and efficient algorithm for red–white–blue sorting. There is a linear-time solution.
 
 * Solution
+
+We can use the Dutch National Flag Algorithm to solve this probleme. 
+
+The time complexity is O(n) and space complexity is O(1).
