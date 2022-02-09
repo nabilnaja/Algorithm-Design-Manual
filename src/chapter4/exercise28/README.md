@@ -8,3 +8,5 @@ the results using a three-way merge subroutine. What is the worst-case running
 time of this modified merge sort?
 
 * Solution
+
+The time complexity is O(n log.base3 n)
