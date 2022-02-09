@@ -10,3 +10,4 @@ How fast is your algorithm?
 
 * Solution
 
+The pairs are compared at most once. 
