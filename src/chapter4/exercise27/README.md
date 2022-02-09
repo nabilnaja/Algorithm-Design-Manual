@@ -15,3 +15,7 @@ in O(n log2 n) cost. Analyze the running time and cost of your algorithm
 and prove correctness.
 
 * Solution
+• By going through the array, locate the position of the max and min misplaced number and swap them, repeat until the array is fully sorted.
+We'll do at max n permutation. 
+
+•
