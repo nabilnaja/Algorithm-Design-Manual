@@ -17,7 +17,7 @@ merge in the kth and final input array. What is the running time?
 k       : kn
 
 2n + 3n + 4n + ... + kn
-= n(1 + 2 + 3 + 4 + ... + (k - 1))
+= n(2 + 3 + 4 + ... + (k))
 = n((k - 1)*k) / 2
 = n(k^2 - k) / 2
 = O(nk ^ 2)
