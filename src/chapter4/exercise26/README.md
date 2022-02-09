@@ -9,3 +9,6 @@ and maximum possible recursion depths for randomized quicksort?
 How fast is your algorithm?
 
 * Solution
+
+The minimum recursion depths occurs whe we're luck and we pick the median everytime. In this case it's log n.
+The maximum possible recursion depths occurs when we pick the max or min element of the list everytime. In this case it's n.
