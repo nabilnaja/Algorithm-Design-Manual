@@ -11,4 +11,4 @@ of n and k?
 
 * Solution
 
-
+The time complexity would be O( n * k * log k). 
