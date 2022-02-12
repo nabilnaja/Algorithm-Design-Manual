@@ -8,3 +8,5 @@ mergesort is a stable sorting algorithm.
 
 * Solution
 
+when merging two subarrays we choose first the value with the lowest index when two values are equals.
+
