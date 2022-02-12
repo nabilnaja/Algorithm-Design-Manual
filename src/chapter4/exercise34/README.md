@@ -8,3 +8,4 @@ time algorithm to sort such sequences.
 
 * Solution
 
+Use a heap to sort S and keep track of occurrence count. This is similar to the exercise 4.22 where k is log n.
