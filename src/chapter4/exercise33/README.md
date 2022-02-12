@@ -7,4 +7,4 @@ time. The interesting case is when k << n.
 
 * Solution
 
-
+We can use a heap to sort the integers, and keep track the occurrence count of each value.
