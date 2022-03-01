@@ -12,5 +12,7 @@ maximum possible length of the k equal pieces cut from the initial n sticks.
 
 * Solution
 
+(a) the answer is 5 : 10 = 2 * 5 , 6 = 1 * 5 + 1, 5 = 1 * 5, 3 = 0 * 5 + 3
+
 * Complexity analysis
 
