@@ -30,5 +30,6 @@ if not we continue searching left -> right = mid - 1;
 
 * Complexity analysis
 
-
+The time complexity is O(N log M). M is the length of the longest stick and n is the number of sticks.
+The space complexity is O(1).
 
