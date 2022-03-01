@@ -14,5 +14,21 @@ maximum possible length of the k equal pieces cut from the initial n sticks.
 
 (a) the answer is 5 : 10 = 2 * 5 , 6 = 1 * 5 + 1, 5 = 1 * 5, 3 = 0 * 5 + 3
 
+(b) we can use binary search to find the maximum possible length. 
+
+The right element of our binary search would be the length of the longest stick and the left element would be 1. 
+
+As long as the left is smaller or equal than the right we continue searching. 
+
+we calculate the mid value : left + (high - low) / 2
+
+then we calculate the number of the equal pieces cut from the initial n sticks
+
+If this number is bigger or equal than k : we continue searching right ->  left = mid + 1
+
+if not we continue searching left -> right = mid - 1;
+
 * Complexity analysis
+
+
 
