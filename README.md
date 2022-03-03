@@ -42,3 +42,5 @@ Trees and Other Dictionary Structures
 #### Chapter 4
 
 #### Chapter 5
+
+* Exercise 10 : Done
