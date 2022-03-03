@@ -39,3 +39,6 @@ Trees and Other Dictionary Structures
 * Exercise 26 : Done
 * Exercise 27 : 
 
+#### Chapter 4
+
+#### Chapter 5
